@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowMuch.StockManagementPage"
+             Title="재고 관리">
+    <StackLayout>
+        <!-- 상단 오른쪽에 버튼 -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+            <Button x:Name="btnReset" Text="초기화" Clicked="btnResetClicked" />
+            <Button x:Name="btnAdd" Text="재고 추가" Clicked="btnAddCliked" />
+        </StackLayout>
+        <!-- ListView -->
+        <ListView ItemsSource="{Binding Stock}" 
+                  x:Name="StockView" 
+                  Margin="5,10,5,5" 
+                  HasUnevenRows="true"
+                  ItemTapped="tapGestureRecognizer_Tapped">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" Padding="5">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="레시피 명" Grid.Column="0" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="판매가격" Grid.Column="1" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="수량" Grid.Column="2" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="총 판매금액" Grid.Column="3" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="순 이익" Grid.Column="4" TextColor="DarkBlue" FontAttributes="Bold"/>
+                    </Grid>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="40"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding RecipeKey}" IsVisible="false"/>
+                                    <Label Text="{Binding RecipeName}" Grid.Column="0" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding Price, StringFormat='{}{0:#,##0}원'}" Grid.Column="1" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding Quantity}" Grid.Column="2" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding TotalPrice, StringFormat='{}{0:#,##0}원'}" Grid.Column="3" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding Profit, StringFormat='{}{0:#,##0}원'}" Grid.Column="4" TextColor="DarkBlue"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

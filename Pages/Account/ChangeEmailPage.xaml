@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowMuch.ChangeEmailPage"
+             Title="이메일 변경">
+    <StackLayout Padding="20">
+        <Label Text="현재 패스워드를 입력해주세요." FontSize="Medium" />
+        <Entry x:Name="currentPasswordEntry" Placeholder="현재 패스워드" IsPassword="True" />
+        <Label Text="변경할 이메일을 입력해주세요" FontSize="Medium" />
+        <Entry x:Name="emailEntry" Placeholder="이메일" Keyboard="Email" />
+        <Button Text="이메일 검증" Clicked="ValidateEmailClicked" ></Button>
+        <Button Text="이메일 변경" Clicked="ChangeEmailClicked" />
+    </StackLayout>
+</ContentPage>

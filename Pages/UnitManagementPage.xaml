@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowMuch.UnitManagementPage"
+             Title="단위 관리">
+    <StackLayout>
+
+        <!-- 상단 오른쪽에 버튼 -->
+        <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="EndAndExpand">
+            <Button x:Name="btnAdd" Text="단위 추가" Clicked="btnAdd_Cliked" />
+        </StackLayout>
+        <!-- ListView -->
+        <ListView 
+            ItemsSource="{Binding Units}" 
+            x:Name="UnitView" 
+            HasUnevenRows="True"
+            ItemTapped="tapGestureRecognizer_Tapped">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" Padding="5">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="200"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="단위 값" Grid.Column="0" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="단위 명" Grid.Column="1" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="설명" Grid.Column="2" TextColor="DarkBlue" FontAttributes="Bold"/>
+                    </Grid>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="200"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding UnitKey}" IsVisible="false"/>
+                                    <Label Text="{Binding Value, StringFormat='{}{0:#,##0}'}" Grid.Row="0" Grid.Column="0" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding UnitName}" Grid.Row="0" Grid.Column="1" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding Desc}" Grid.Row="0" Grid.Column="2" TextColor="DarkBlue"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

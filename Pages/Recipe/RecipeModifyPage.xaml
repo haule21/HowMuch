@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowMuch.RecipeModifyPage"
+             Title="레시피 수정">
+    <StackLayout x:Name="RecipeLayout">
+        <StackLayout Orientation="Horizontal" Padding="10">
+            <Label Text=""
+               x:Name="RecipeName"
+           FontSize="24"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="StartAndExpand"/>
+        </StackLayout>
+        <Grid x:Name="UnitGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="RecipeKey" Text="" IsVisible="false"/>
+            <Label Grid.Row="0" Grid.Column="0" Text="변경할 레시피 명: "/>
+            <Entry Grid.Row="1" Grid.Column="1" x:Name="ChangeRecipeName" Text="" Placeholder="변경할 소스 명을 입력하여 주세요."/>
+            <Label Grid.Row="2" Grid.Column="0" Text="변경할 판매 가격: "/>
+            <Entry Grid.Row="3" Grid.Column="1" x:Name="ChangePrice" Text="" Placeholder="변경할 판매 가격을 입력해 주세요." Keyboard="Numeric"/>
+        </Grid>
+        <Grid HorizontalOptions="Center" Padding="20, 0, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Margin="0, 10, 0, 0" FontSize="20" Text="저장" Clicked="btnSaveClicked"/>
+            <Button Grid.Row="0" Grid.Column="1" Margin="0, 10, 0, 0" FontSize="20" Text="취소" Clicked="btnCancelClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

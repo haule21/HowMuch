@@ -1,0 +1,227 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HowMuch
+build_property.ProjectDir = C:\Users\sungw\source\repos\HowMuch .NET 8\HowMuch\HowMuch\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTAotOptimizerEnabled = true
+build_property.CsWinRTAotExportsEnabled = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptIn = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptOut = 
+build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
+build_property.CsWinRTMergeReferencedActivationFactories = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Account/AccountSettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Account.AccountSettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Account\AccountSettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Account\AccountSettingsPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Account/ChangeEmailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Account.ChangeEmailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Account\ChangeEmailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Account\ChangeEmailPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Account/ChangePasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Account.ChangePasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Account\ChangePasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Account\ChangePasswordPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Account/PasswordFindPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Account.PasswordFindPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Account\PasswordFindPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Account\PasswordFindPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/IngredientManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.IngredientManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\IngredientManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\IngredientManagementPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Ingredient/IngredientAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Ingredient.IngredientAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Ingredient\IngredientAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Ingredient\IngredientAddPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Ingredient/IngredientModifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Ingredient.IngredientModifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Ingredient\IngredientModifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Ingredient\IngredientModifyPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/RecipeManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.RecipeManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RecipeManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RecipeManagementPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Recipe/RecipeAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Recipe.RecipeAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Recipe\RecipeAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Recipe\RecipeAddPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Recipe/RecipeDetailAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Recipe.RecipeDetailAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Recipe\RecipeDetailAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Recipe\RecipeDetailAddPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Recipe/RecipeDetailManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Recipe.RecipeDetailManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Recipe\RecipeDetailManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Recipe\RecipeDetailManagementPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Recipe/RecipeDetailModifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Recipe.RecipeDetailModifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Recipe\RecipeDetailModifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Recipe\RecipeDetailModifyPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Recipe/RecipeModifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Recipe.RecipeModifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Recipe\RecipeModifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Recipe\RecipeModifyPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/SourceManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.SourceManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SourceManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SourceManagementPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Source/SourceAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Source.SourceAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Source\SourceAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Source\SourceAddPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Source/SourceModifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Source.SourceModifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Source\SourceModifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Source\SourceModifyPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Source/SourceRecipeAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Source.SourceRecipeAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Source\SourceRecipeAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Source\SourceRecipeAddPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Source/SourceRecipeManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Source.SourceRecipeManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Source\SourceRecipeManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Source\SourceRecipeManagementPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Source/SourceRecipeModifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Source.SourceRecipeModifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Source\SourceRecipeModifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Source\SourceRecipeModifyPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/StockManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.StockManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\StockManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\StockManagementPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Stock/StockAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Stock.StockAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Stock\StockAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Stock\StockAddPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Stock/StockModifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Stock.StockModifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Stock\StockModifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Stock\StockModifyPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Subscription/SubscriptionSettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Subscription.SubscriptionSettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Subscription\SubscriptionSettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Subscription\SubscriptionSettingsPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/UnitManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.UnitManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\UnitManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\UnitManagementPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Unit/UnitAddPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Unit.UnitAddPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Unit\UnitAddPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Unit\UnitAddPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Pages/Unit/UnitModifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Pages.Unit.UnitModifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Unit\UnitModifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Unit\UnitModifyPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/sungw/source/repos/HowMuch .NET 8/HowMuch/HowMuch/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HowMuch.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml

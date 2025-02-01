@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowMuch.SourceManagementPage"
+             Title="소스 관리">
+    <StackLayout>
+        <!-- 상단 오른쪽에 버튼 -->
+        <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="EndAndExpand">
+            <Button x:Name="btnRefresh" Text="새로고침" Clicked="btnRefreshCliked" />
+            <Button x:Name="btnAdd" Text="소스 추가" Clicked="btnAddCliked" />
+        </StackLayout>
+        <!-- ListView -->
+        <ListView ItemsSource="{Binding Source}" 
+                  Grid.Row ="1" 
+                  x:Name="SourceView" 
+                  Margin="5,10,5,5" 
+                  HasUnevenRows="true"
+                  ItemTapped="tapGestureRecognizer_Tapped">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" Padding="5">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="소스 명" Grid.Column="0" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="소스 량" Grid.Column="1" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="단위 당 가격" Grid.Column="2" TextColor="DarkBlue" FontAttributes="Bold"/>
+                    </Grid>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding SourceKey}" IsVisible="false"/>
+                                    <Label Text="{Binding SourceName}" Grid.Column="0" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding Amount, StringFormat='{}{0:#,##0}g'}" Grid.Column="1" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding PricePerUnit, StringFormat='{}{0:#,##0}원'}" Grid.Column="2" TextColor="DarkBlue"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

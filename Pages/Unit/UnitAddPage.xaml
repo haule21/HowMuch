@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowMuch.UnitAddPage"
+             Title="단위 추가">
+    <StackLayout x:Name="UnitLayout">
+        <StackLayout Orientation="Vertical">
+            <Grid x:Name="UnitGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="단위: "/>
+                <Entry Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="UnitName" Placeholder="필수 입력입니다." FontSize="20"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="상위 단위 및 변환 수치(선택)"/>
+                <Picker Grid.Row="1" Grid.Column="1" x:Name="ParentUnit" ItemsSource="{Binding AllUnit}" SelectedItem="{Binding SelectedItem}" Title="상위 단위" >
+                    <Picker.ItemDisplayBinding>
+                        <Binding Path="UnitName" />
+                    </Picker.ItemDisplayBinding>
+                </Picker>
+                <Entry Grid.Row="1" Grid.Column="2" x:Name="ParentUnitRelation" Placeholder="변환 단위를 입력해주세요."/>
+                <Label Grid.Row="2" Grid.Column="0" Text="단위 값: "/>
+                <Entry Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="Value" Placeholder="필수 입력입니다.(숫자)"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="설명: "/>
+                <Entry Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="Desc" Placeholder="설명을 입력합니다.(선택)"/>
+            </Grid>
+            <Grid HorizontalOptions="Center" Padding="20, 0, 0, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Text="저장" Clicked="btnSaveClicked"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="취소" Clicked="btnCancelClicked"/>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

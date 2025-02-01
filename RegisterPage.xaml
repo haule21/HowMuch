@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowMuch.RegisterPage"
+             Title="RegisterPage">
+    <StackLayout Spacing="20">
+
+        <!-- UserId 입력 필드 -->
+        <Entry x:Name="UserIdEntry" 
+       Placeholder="아이디" 
+       Keyboard="Default" 
+       MaxLength="16" />
+
+        <!-- Password 입력 필드 -->
+        <Entry x:Name="PasswordEntry" 
+       Placeholder="비밀번호" 
+       IsPassword="True" 
+       MaxLength="64" />
+
+        <!-- Name 입력 필드 -->
+        <Entry x:Name="NameEntry" 
+       Placeholder="이름" 
+       MaxLength="32" />
+
+        <StackLayout x:Name="registerLayout" BindableLayout.ItemsSource="{Binding visibleDatas}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Entry x:Name="EmailEntry" Placeholder="이메일" Text="{Binding email}" MaxLength="32" />
+                        <Button x:Name="EmailButton" Text="이메일 검증" Clicked="EmailButtonClicked"/>
+                        <StackLayout Spacing="20" Orientation="Horizontal" >
+                            <Entry x:Name="EmailValidateEntry" Placeholder="검증코드" Keyboard="Numeric" Text="{Binding emailVerifyCode}"/>
+                            <Button x:Name="EmailValidateButton" Text="검증" Clicked="EmailValidateButtonClicked"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- Name 입력 필드 -->
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+
+        <!-- 가입 버튼 -->
+        <Button Text="회원가입"
+        Clicked="onSignUpButtonClicked" 
+        BackgroundColor="DodgerBlue" 
+        TextColor="White"/>
+
+    </StackLayout>
+</ContentPage>

@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HowMuch.UnitAddPage"
+             xmlns:controls="clr-namespace:Plugin.MauiMTAdmob.Controls;assembly=Plugin.MauiMTAdmob"
              Title="단위 추가">
     <StackLayout x:Name="UnitLayout">
+        <controls:MTAdView/>
         <StackLayout Orientation="Vertical">
             <Grid x:Name="UnitGrid">
                 <Grid.ColumnDefinitions>

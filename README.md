@@ -4,6 +4,11 @@
  - .Net Maui
  - .Net 8
 
+## Packages
+ - maui compatibility 8.0.100
+ - maui controls 8.0.100
+ - maui admobs 1.6.4
+
 ## Project Period
 - 1 week
 

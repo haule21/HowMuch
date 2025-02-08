@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -159,7 +160,7 @@ public partial class RecipeDetailModifyPage : ContentPage
             if (response.state)
             {
                 await DisplayAlert("저장 성공", "이전 페이지로 이동합니다.", "확인");
-                MessagingCenter.Send(this, "RefreshRecipeDetailManagementPage");
+                WeakReferenceMessenger.Default.Send<MessageSenderRecipeDetail>(new MessageSenderRecipeDetail("RecipeDetailModify"));
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
             else

@@ -1,34 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              xmlns:controls="clr-namespace:Plugin.MauiMTAdmob.Controls;assembly=Plugin.MauiMTAdmob"
-             x:Class="HowMuch.MainPage">
+             x:Class="HowMuch.MainPage"
+             >
+    <ContentPage.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="#213555" />
+    </ContentPage.Behaviors>
     <ContentPage.ToolbarItems>
         <!-- 톱니모양 아이콘을 가진 버튼 -->
         <ToolbarItem Text="설정" 
-                 IconImageSource="settings_icon.png" 
-        Clicked="OnSettingsClicked" />
+                    IconImageSource="settings_icon.png"
+                    Clicked="OnSettingsClicked" />
     </ContentPage.ToolbarItems>
+    <AbsoluteLayout>
+        <StackLayout 
+                Margin="0, 0, 0, 140"
+                AbsoluteLayout.LayoutFlags="PositionProportional" 
+                AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize">
+            <controls:MTAdView/>
+            <Grid HorizontalOptions="Center" 
+                      VerticalOptions="Center" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
 
-    <StackLayout>
-        <controls:MTAdView/>
-        <Grid HorizontalOptions="Center" VerticalOptions="Center" Margin="20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
-                <RowDefinition Height="100" />
-                <RowDefinition Height="100" />
-            </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170" />
+                    <ColumnDefinition Width="170" />
+                </Grid.ColumnDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150" />
-                <ColumnDefinition Width="150" />
-            </Grid.ColumnDefinitions>
-
-            <Button x:Name="btnUnitManagement" Text="단위관리" Margin="5" Grid.Row="0" FontSize="20" Grid.Column="0" Clicked="btnUnitManagement_Clicked" />
-            <Button x:Name="btnIngredientsManagement" Text="재료관리" Margin="5" Grid.Row="0" FontSize="20" Grid.Column="1" Clicked="btnIngredientsManagement_Clicked" />
-            <Button x:Name="btnSourceManagement" Text="소스관리" Margin="5" Grid.Row="1" FontSize="20" Grid.Column="0" Clicked="btnSourceManagement_Clicked" />
-            <Button x:Name="btnRecipeManagement" Text="레시피관리" Margin="5" Grid.Row="1" FontSize="20" Grid.Column="1" Clicked="btnRecipeManagement_Clicked" />
-            <Button x:Name="btnStockManagement" Text="재고관리" Margin="5" Grid.Row="2" FontSize="20" Grid.ColumnSpan="2" Grid.Column="0" Clicked="btnStockManagement_Clicked" />
-        </Grid>
-    </StackLayout>
+                <Button x:Name="btnUnitManagement" FontAttributes="Bold" CornerRadius="20" Text="단위관리" Margin="5" Grid.Row="0" FontSize="20" Grid.Column="0" Clicked="btnUnitManagement_Clicked">
+                    <Button.Shadow>
+                        <Shadow Brush="#213555"
+                                    Opacity="0.3"
+                                    Radius="1"
+                                    Offset="0,5"/>
+                    </Button.Shadow>
+                </Button>
+                <Button x:Name="btnIngredientsManagement" FontAttributes="Bold" CornerRadius="20" Text="재료관리" Margin="5" Grid.Row="0" FontSize="20" Grid.Column="1" Clicked="btnIngredientsManagement_Clicked">
+                    <Button.Shadow>
+                        <Shadow Brush="#213555"
+                                    Opacity="0.3"
+                                    Radius="1"
+                                    Offset="0,5"/>
+                    </Button.Shadow>
+                </Button>
+                <Button x:Name="btnSourceManagement" FontAttributes="Bold" CornerRadius="20" Text="소스관리" Margin="5" Grid.Row="1" FontSize="20" Grid.Column="0" Clicked="btnSourceManagement_Clicked" >
+                    <Button.Shadow>
+                        <Shadow Brush="#213555"
+                                    Opacity="0.3"
+                                    Radius="1"
+                                    Offset="0,5"/>
+                    </Button.Shadow>
+                </Button>
+                <Button x:Name="btnRecipeManagement" FontAttributes="Bold" CornerRadius="20" Text="레시피관리" Margin="5" Grid.Row="1" FontSize="20" Grid.Column="1" Clicked="btnRecipeManagement_Clicked" >
+                    <Button.Shadow>
+                        <Shadow Brush="#213555"
+                                    Opacity="0.3"
+                                    Radius="1"
+                                    Offset="0,5"/>
+                    </Button.Shadow>
+                </Button>
+                <Button x:Name="btnStockManagement" FontAttributes="Bold" CornerRadius="20" Text="재고관리" Margin="5" Grid.Row="2" FontSize="20" Grid.ColumnSpan="2" Grid.Column="0" Clicked="btnStockManagement_Clicked" >
+                    <Button.Shadow>
+                        <Shadow Brush="#213555"
+                                    Opacity="0.3"
+                                    Radius="1"
+                                    Offset="0,5"/>
+                    </Button.Shadow>
+                </Button>
+            </Grid>
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -118,7 +119,7 @@ public partial class UnitModifyPage : ContentPage
         if (response.state)
         {
             await DisplayAlert("저장 성공", "이전 페이지로 이동합니다.", "확인");
-            MessagingCenter.Send(this, "RefreshUnitManagementPage");
+            WeakReferenceMessenger.Default.Send<MessageSenderUnit>(new MessageSenderUnit("UnitModify"));
             await Application.Current.MainPage.Navigation.PopAsync();
         }
         else

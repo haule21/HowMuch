@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using Plugin.MauiMTAdmob;
 
 namespace HowMuch
@@ -11,6 +12,7 @@ namespace HowMuch
             builder
                 .UseMauiApp<App>()
                 .UseMauiMTAdmob()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

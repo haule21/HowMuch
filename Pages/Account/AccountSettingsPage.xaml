@@ -7,9 +7,16 @@
     <StackLayout Padding="20">
         <controls:MTAdView/>
         <Label Text="계정 설정" FontSize="Large" HorizontalOptions="Center" />
-        <Button Text="패스워드 변경" Clicked="btnChangePasswordClicked" />
-        <Button Text="이메일 변경" Clicked="btnEmailClicked" />
-        <Button Text="로그아웃" Clicked="btnLogoutClicked" />
-        <Button Text="계정탈퇴" Clicked="btnDeleteAccountClicked" />
+        <ListView x:Name="settingsListView" ItemTapped="OnItemTapped">
+            <ListView.ItemsSource>
+                <!-- 설정 항목 목록 -->
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>패스워드 변경</x:String>
+                    <x:String>이메일 변경</x:String>
+                    <x:String>로그아웃</x:String>
+                    <x:String>계정탈퇴</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
     </StackLayout>
 </ContentPage>

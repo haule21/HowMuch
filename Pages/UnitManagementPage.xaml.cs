@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
 
 namespace HowMuch;
@@ -9,6 +10,9 @@ public partial class UnitManagementPage : ContentPage
     {
         InitializeComponent();
         Load();
+        WeakReferenceMessenger.Default.Register<MessageSenderUnit>(this, (r, m) => {
+            Load();
+        });
     }
     private async void Load()
     {
@@ -74,18 +78,12 @@ public partial class UnitManagementPage : ContentPage
     }
     private async void btnAdd_Cliked(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<UnitAddPage>(this, "RefreshUnitManagementPage", (addSender) => {
-            Load();
-        });
         await Navigation.PushAsync(new UnitAddPage());
     }
 
     private async void tapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
         UnitData data = ((ListView)sender).SelectedItem as UnitData;
-        MessagingCenter.Subscribe<UnitModifyPage>(this, "RefreshUnitManagementPage", (modifySender) => {
-            Load();
-        });
         await Navigation.PushAsync(new UnitModifyPage(data));
     }
 }

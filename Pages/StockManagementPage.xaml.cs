@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -10,6 +11,9 @@ public partial class StockManagementPage : ContentPage
     {
         InitializeComponent();
         Load();
+        WeakReferenceMessenger.Default.Register<MessageSenderStock>(this, (r, m) => {
+            Load();
+        });
     }
     private async void Load()
     {
@@ -30,9 +34,6 @@ public partial class StockManagementPage : ContentPage
     }
     private async void btnAddCliked(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<StockAddPage>(this, "RefreshStockManagementPage", (addSender) => {
-            Load();
-        });
         await Navigation.PushAsync(new StockAddPage());
     }
 
@@ -48,9 +49,6 @@ public partial class StockManagementPage : ContentPage
     private async void tapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
         StockData data = ((ListView)sender).SelectedItem as StockData;
-        MessagingCenter.Subscribe<StockModifyPage>(this, "RefreshStockManagementPage", (modifySender) => {
-            Load();
-        });
         await Navigation.PushAsync(new StockModifyPage(data));
     }
 }

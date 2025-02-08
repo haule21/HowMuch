@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
 
 namespace HowMuch;
@@ -13,6 +14,9 @@ public partial class SourceRecipeManagementPage : ContentPage
     {
         InitializeComponent();
         Load(source);
+        WeakReferenceMessenger.Default.Register<MessageSenderSourceRecipe>(this, (r, m) => {
+            Load(new SourceData() { SourceKey = CurrentSourceKey, SourceName = CurrentSourceName, PricePerUnit = null });
+        });
     }
 
     private async void Load(SourceData source)
@@ -65,28 +69,16 @@ public partial class SourceRecipeManagementPage : ContentPage
     }
     private async void btnModifyClicked(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<SourceModifyPage>(this, "RefreshSourceRecipeManagementPage", (addSender) => {
-            Load(new SourceData() { SourceKey = CurrentSourceKey, SourceName = CurrentSourceName, PricePerUnit = null });
-        });
-
         await Navigation.PushAsync(new SourceModifyPage(new SourceData() { SourceKey = CurrentSourceKey, SourceName = CurrentSourceName, Amount = CurrentSourceAmount }));
     }
 
     private async void btnAddClicked(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<SourceRecipeAddPage>(this, "RefreshSourceRecipeManagementPage", (addSender) => {
-            Load(new SourceData() { SourceKey = CurrentSourceKey, SourceName = CurrentSourceName, Amount = CurrentSourceAmount });
-        });
-
         await Navigation.PushAsync(new SourceRecipeAddPage(CurrentSourceKey, CurrentSourceName));
     }
     private async void tapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
         SourceRecipeData data = ((ListView)sender).SelectedItem as SourceRecipeData;
-        MessagingCenter.Subscribe<SourceModifyPage>(this, "RefreshSourceRecipeManagementPage", (modifySender) => {
-            Load(new SourceData() { SourceKey = CurrentSourceKey, SourceName = CurrentSourceName });
-        });
-
         await Navigation.PushAsync(new SourceRecipeModifyPage(data));
     }
 }

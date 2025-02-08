@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
 
 namespace HowMuch;
@@ -13,6 +14,9 @@ public partial class RecipeDetailManagementPage : ContentPage
     {
         InitializeComponent();
         Load(recipe);
+        WeakReferenceMessenger.Default.Register<MessageSenderRecipeDetail>(this, (r, m) => {
+            Load(new RecipeData() { RecipeKey = CurrentRecipeKey, RecipeName = CurrentRecipeName });
+        });
     }
 
     private async void Load(RecipeData recipe)
@@ -64,27 +68,16 @@ public partial class RecipeDetailManagementPage : ContentPage
     }
     private async void btnModifyClicked(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<RecipeModifyPage>(this, "RefreshRecipeDetailManagementPage", (addSender) => {
-            Load(new RecipeData() { RecipeKey = CurrentRecipeKey, RecipeName = CurrentRecipeName });
-        });
-
         await Navigation.PushAsync(new RecipeModifyPage(new RecipeData() { RecipeKey = CurrentRecipeKey, RecipeName = CurrentRecipeName, Price = CurrentRecipePrice }));
     }
 
     private async void btnAddClicked(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<RecipeDetailAddPage>(this, "RefreshRecipeDetailManagementPage", (addSender) => {
-            Load(new RecipeData() { RecipeKey = CurrentRecipeKey, RecipeName = CurrentRecipeName });
-        });
-
         await Navigation.PushAsync(new RecipeDetailAddPage(CurrentRecipeKey, CurrentRecipeName));
     }
     private async void tapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
         RecipeDetailData data = ((ListView)sender).SelectedItem as RecipeDetailData;
-        MessagingCenter.Subscribe<RecipeDetailModifyPage>(this, "RefreshRecipeDetailManagementPage", (modifySender) => {
-            Load(new RecipeData() { RecipeKey = CurrentRecipeKey, RecipeName = CurrentRecipeName });
-        });
 
         await Navigation.PushAsync(new RecipeDetailModifyPage(data));
     }

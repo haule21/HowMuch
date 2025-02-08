@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
 
 namespace HowMuch;
@@ -9,6 +10,9 @@ public partial class SourceManagementPage : ContentPage
     {
         InitializeComponent();
         Load();
+        WeakReferenceMessenger.Default.Register<MessageSenderSource>(this, (r, m) => {
+            Load();
+        });
     }
     private async void Load()
     {
@@ -55,17 +59,11 @@ public partial class SourceManagementPage : ContentPage
     }
     private async void btnAddCliked(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<SourceAddPage>(this, "RefreshSourceManagementPage", (addSender) => {
-            Load();
-        });
         await Navigation.PushAsync(new SourceAddPage());
     }
 
     private async void tapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<SourceRecipeManagementPage>(this, "RefreshSourceManagementPage", (addSender) => {
-            Load();
-        });
         SourceData data = ((ListView)sender).SelectedItem as SourceData;
         await Navigation.PushAsync(new SourceRecipeManagementPage(data));
     }

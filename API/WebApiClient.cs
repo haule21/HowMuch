@@ -115,9 +115,13 @@ namespace HowMuch
 
         public async Task<string> Post(string endPoint, Param parameter = null)
         {
-
-            string jsonData = JsonConvert.SerializeObject(parameter.GetParameter());
-            StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            StringContent content = null;
+            if (parameter != null)
+            {
+                string jsonData = JsonConvert.SerializeObject(parameter.GetParameter());
+                content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            }
+            
             PostResponse defaultResponse = new PostResponse()
             {
                 message = "",

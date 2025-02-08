@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 
 namespace HowMuch;
@@ -57,7 +58,7 @@ public partial class StockModifyPage : ContentPage
 
 
         await DisplayAlert("저장 성공", "이전 페이지로 이동합니다.", "확인");
-        MessagingCenter.Send(this, "RefreshStockManagementPage");
+        WeakReferenceMessenger.Default.Send<MessageSenderStock>(new MessageSenderStock("StockSave"));
         await Application.Current.MainPage.Navigation.PopAsync();
 
     }
@@ -94,7 +95,7 @@ public partial class StockModifyPage : ContentPage
             }
 
             await DisplayAlert("저장 성공", "이전 페이지로 이동합니다.", "확인");
-            MessagingCenter.Send(this, "RefreshStockManagementPage");
+            WeakReferenceMessenger.Default.Send<MessageSenderStock>(new MessageSenderStock("StockDelete"));
             await Application.Current.MainPage.Navigation.PopAsync();
         }
     }

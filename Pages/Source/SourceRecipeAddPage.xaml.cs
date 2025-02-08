@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -130,7 +131,7 @@ public partial class SourceRecipeAddPage : ContentPage
             if (response.state)
             {
                 await DisplayAlert("저장 성공", "이전 페이지로 이동합니다.", "확인");
-                MessagingCenter.Send(this, "RefreshSourceRecipeManagementPage");
+                WeakReferenceMessenger.Default.Send<MessageSenderSourceRecipe>(new MessageSenderSourceRecipe("SourceRecipeAdd"));
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
             else

@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -151,7 +152,7 @@ public partial class SourceRecipeModifyPage : ContentPage
                 SourceRecipeKey = this.SourceRecipeKey,
                 IngredientKey = modify.SelectedItemIngredient.IngredientKey,
                 MaterialUsage = materialUsage,
-                UnitKey = modify.SelectedItemIngredient.UnitKey
+                UnitKey = modify.SelectedItemUnit.UnitKey
             };
 
             PostResponse response = JsonConvert.DeserializeObject<PostResponse>(await WebApiClient.Instance.Post(END_POINT.MODIFY_SOURCE_RECIPE, sourceRecipeParam));
@@ -159,7 +160,7 @@ public partial class SourceRecipeModifyPage : ContentPage
             if (response.state)
             {
                 await DisplayAlert("저장 성공", "이전 페이지로 이동합니다.", "확인");
-                MessagingCenter.Send(this, "RefreshSourceRecipeManagementPage");
+                WeakReferenceMessenger.Default.Send<MessageSenderSourceRecipe>(new MessageSenderSourceRecipe("SourceRecipeModify"));
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
             else

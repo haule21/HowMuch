@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using Newtonsoft.Json;
 
 namespace HowMuch;
@@ -43,13 +44,13 @@ public partial class SourceModifyPage : ContentPage
                 Amount = changeSourceAmount
             };
 
-            PostResponse response = JsonConvert.DeserializeObject<PostResponse>(await WebApiClient.Instance.Post(END_POINT.MODIFY_UNIT, sourceParam));
+            PostResponse response = JsonConvert.DeserializeObject<PostResponse>(await WebApiClient.Instance.Post(END_POINT.MODIFY_SOURCE, sourceParam));
 
             if (response.state)
             {
                 await DisplayAlert("저장 성공", "이전 페이지로 이동합니다.", "확인");
-                MessagingCenter.Send(this, "RefreshSourceRecipeManagementPage");
-                await Application.Current.MainPage.Navigation.PopAsync();
+                WeakReferenceMessenger.Default.Send<MessageSenderSource>(new MessageSenderSource("SourceModify"));
+                Application.Current.MainPage = new NavigationPage(new MainPage());
             }
             else
             {

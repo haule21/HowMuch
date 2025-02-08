@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="5" android:versionName="1.0" package="com.MarginFairy" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="7" android:versionName="1.0" package="com.MarginFairy" android:installLocation="auto">
 	<application android:allowBackup="true" android:networkSecurityConfig="@xml/network_security_config" android:usesCleartextTraffic="true" android:supportsRtl="true" android:label="MarginFairy">
-    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
-           android:value="ca-app-pub-5884490911288505~2328295801"/>
-  </application>
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-5884490911288505~2328295801" />
+	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

@@ -1,4 +1,7 @@
-﻿namespace HowMuch
+﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Graphics;
+namespace HowMuch
 {
     public partial class MainPage : ContentPage
     {

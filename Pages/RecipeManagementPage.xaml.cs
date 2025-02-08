@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
 
 namespace HowMuch;
@@ -9,6 +10,9 @@ public partial class RecipeManagementPage : ContentPage
     {
         InitializeComponent();
         Load();
+        WeakReferenceMessenger.Default.Register<MessageSenderRecipe>(this, (r, m) => {
+            Load();
+        });
     }
     private async void Load()
     {
@@ -55,17 +59,11 @@ public partial class RecipeManagementPage : ContentPage
     }
     private async void btnAddCliked(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<RecipeAddPage>(this, "RefreshRecipeManagementPage", (addSender) => {
-            Load();
-        });
         await Navigation.PushAsync(new RecipeAddPage());
     }
 
     private async void tapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
-        MessagingCenter.Subscribe<RecipeDetailManagementPage>(this, "RefreshRecipeManagementPage", (addSender) => {
-            Load();
-        });
         RecipeData data = ((ListView)sender).SelectedItem as RecipeData;
         await Navigation.PushAsync(new RecipeDetailManagementPage(data));
     }

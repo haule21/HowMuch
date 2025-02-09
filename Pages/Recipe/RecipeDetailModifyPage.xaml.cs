@@ -152,7 +152,7 @@ public partial class RecipeDetailModifyPage : ContentPage
                 SourceRecipeKey = this.RecipeDetailKey,
                 IngredientKey = modify.SelectedItemIngredient.IngredientKey,
                 MaterialUsage = materialUsage,
-                UnitKey = modify.SelectedItemIngredient.UnitKey
+                UnitKey = modify.SelectedItemUnit.UnitKey
             };
 
             PostResponse response = JsonConvert.DeserializeObject<PostResponse>(await WebApiClient.Instance.Post(END_POINT.MODIFY_SOURCE_RECIPE, sourceRecipeParam));

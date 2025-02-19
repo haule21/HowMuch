@@ -3,6 +3,9 @@
   <base-config cleartextTrafficPermitted="true">
   </base-config>
   <domain-config>
-    <domain includeSubdomains="true">marginfairy.koreacentral.cloudapp.azure.com</domain>
+    <domain includeSubdomains="true">marginfairy.store</domain>
+    <trust-anchors>
+      <certificates src="@raw/margin_ca"/>
+    </trust-anchors>
   </domain-config>
 </network-security-config>

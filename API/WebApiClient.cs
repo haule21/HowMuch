@@ -15,7 +15,7 @@ namespace HowMuch
         private static CookieContainer CookieContainer;
         private static HttpClientHandler ClientHandler;
         private static HttpClient Client;
-        const string URL = "https://marginfairy.koreacentral.cloudapp.azure.com/api/";
+        const string URL = "https://marginfairy.store/api/";
         static WebApiClient instance = null;
         static readonly object _lock = new object();
 

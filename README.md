@@ -68,4 +68,12 @@
 # 어떻게 사용하면 되나요 :triangular_flag_on_post:
  - 아직 출시 예정이지만, 간단한 이메일을 통해 회원가입을 하고서 모두 무료로 사용할 수 있어요!
 
-  
+
+# Sample 이미지
+<kbd>
+ <img src="https://github.com/user-attachments/assets/42240dac-a08b-4ac8-bb26-1174e57e5351" width="30%" height="30%">
+ <img src="https://github.com/user-attachments/assets/d563c81d-c630-457b-ad78-bfc246f84713" width="30%" height="30%">
+ <img src="https://github.com/user-attachments/assets/170c066d-8bab-487f-b7f6-d4c12001a50d" width="30%" height="30%">
+</kbd>
+
+
